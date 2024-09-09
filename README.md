@@ -111,3 +111,39 @@ validateButton(): Checks if the Login/Signup button is enabled. Returns a boolea
 click(): Clicks the Login/Signup button and then the New User link.
 signup(String un, String em, String pass): Fills the Signup form with provided parameters for name (un), email (em), and password (pass). Then, clicks the Signup button.This example demonstrates how to accept cookies, validate the Login/Signup button, navigate to the signup form, and fill in the signup details using the provided methods.
 
+TestCases: To call Methods from Pages and to validate functions:
+The project consists of three main packages:
+
+com.qa.GermanyIsCalling.base: This package contains the base class BaseClass which provides common functionalities like WebDriver initialization and property file loading.
+com.qa.GermanyIsCalling.pages: This package contains page objects for different pages of the Germany Is Calling application, such as SignInPage and SignUpPage. These page objects encapsulate elements and functionalities specific to each page.
+com.qa.GermanyIsCalling.testcases: This package contains test cases for various functionalities of the application. These test cases extend the BaseClass and interact with page objects to perform actions and verify results.
+Test Cases:
+
+The provided code snippets showcase three test cases:
+
+SignIn.java:
+This test case performs the following actions:
+Accepts cookies (if any) on the login page.
+Clicks on the login button.
+Enters valid email and password for login (credentials are retrieved from a property file).
+signup.java:
+This test case performs the following actions:
+Accepts cookies (if any) on the signup page.
+Verifies the presence of the signup button.
+Clicks on the signup button.
+Enters valid details (name, email, password) for signup (credentials are retrieved from a property file).
+unsuccessfulLogin.java:
+This test case performs login attempts with different scenarios:
+Login with invalid credentials (both email and password are wrong).
+Login with empty credentials (both email and password fields are empty).
+Login with valid email and invalid password (only password is wrong).
+Running the Tests:
+
+To run the test cases, you'll need the following:
+
+Java installed
+TestNG framework installed
+Selenium WebDriver libraries
+Project files with necessary code
+Once you have these prerequisites, you can execute the test cases using a TestNG runner tool.
+
