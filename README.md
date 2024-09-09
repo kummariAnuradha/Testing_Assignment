@@ -54,7 +54,7 @@ Running Tests:
 
 Use a testing framework like TestNG to run your test classes. The @AfterClass teardown method in the BaseClass will ensure the browser is closed after each test execution.
 
-SignInPage:
+SignInPage.java:
 This file contains the SignInPage class, which represents the Sign In page within the GermanyIsCalling application. It utilizes the Page Object Model (POM) design pattern for efficient and maintainable test automation.
 
 Dependencies
@@ -84,3 +84,30 @@ Consider using a more robust locator strategy (e.g., combining XPath with CSS se
 If applicable, explore using a framework like Page Factory for managing Page Objects.
 Employ proper logging mechanisms (e.g., using a logger class) to track actions and errors during test execution.
 Adhere to best practices for test automation code structure, readability, and maintainability.
+
+signUppage.java
+This document outlines the functionalities of the SignUpPage.java class within the com.qa.GermanyIsCalling.pages package. This class interacts with the elements on the Signup webpage of the GermanyIsCalling application.
+Dependencies
+
+BaseClass.java - This class likely contains common methods and functionalities used across all page objects.
+Selenium WebDriver - A library for automating web browser interactions.
+Locators
+
+The class utilizes XPath expressions to locate web elements on the Signup webpage. Here's a breakdown of the locators used:
+
+Accept: Targets the button to accept cookies.
+logorsignup: Locates the Login/Signup button.
+newUser: Identifies the link for new users to register.
+Name: Finds the input field for the user's name.
+email: Locates the input field for the user's email address.
+password: Identifies the input field for the user's password.
+signup: Targets the button to submit the signup form.
+Actions
+
+The SignUpPage.java class provides several methods to interact with the Signup webpage elements:
+
+AcceptClick(): Clicks the button to accept cookies.
+validateButton(): Checks if the Login/Signup button is enabled. Returns a boolean value.
+click(): Clicks the Login/Signup button and then the New User link.
+signup(String un, String em, String pass): Fills the Signup form with provided parameters for name (un), email (em), and password (pass). Then, clicks the Signup button.This example demonstrates how to accept cookies, validate the Login/Signup button, navigate to the signup form, and fill in the signup details using the provided methods.
+
